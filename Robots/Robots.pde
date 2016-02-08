@@ -1,13 +1,42 @@
-// Create the canvas
-size(600, 600);
-
-// Add code below to make your preferred
-// robot, according to your plan.
-//
-// NOTE: Before you begin coding, please
-//       post a clear photograph of your plans
-//       to Sesame.
-//
-// NOTE: Please commit to GitHub repository
-//       in stages – as each "part" of your
-//       robot is finished.
+size(400,400);
+//arm sockets
+rect(145,90,10,20);
+rect(245,90,10,20);
+line(180,100,180,40);
+line(170,100,170,50);
+fill(255);
+//arms
+rect(128,140,15,50);
+rect(258,140,15,50);
+//hands
+ellipse(136,175,20,40);
+ellipse(265,175,20,40);
+//fingers
+noFill();
+arc(136,210,20,40,radians(180),radians(360));
+arc(265,210,20,40,radians(180),radians(360));
+//lower torso
+fill(0);
+ellipse(200,105,95,50);
+fill(90);
+ellipse(200,115,85,40);
+fill(0);
+ellipse(200,126,75,30);
+fill(90);
+stroke(0);
+ellipse(200,136,65,20);
+fill(155);
+stroke(0);
+triangle(200,100,240,180,160,180);
+noStroke();
+triangle(160,100,240,100,200,180);
+//head, body and shoulders (copy and paste to end when finished)
+stroke(0);
+fill(155);
+ellipse(135,113,30,60);
+ellipse(265,113,30,60);
+ellipse(200,100,100,50);
+ellipse(200,88,20,40);
+arc(200,88,20,5,radians(0),radians(180));
+noFill();
+//legs
