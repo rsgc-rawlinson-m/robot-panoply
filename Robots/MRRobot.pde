@@ -4,8 +4,8 @@ class MRRobot {
   }
 
   void drawAt(int x, int y, float horizontalScale, float verticalScale) {
-
-
+noStroke();
+strokeWeight(1);
     //arm sockets
     rect(x + 145*horizontalScale, y + 90*verticalScale, 10*horizontalScale, 20*verticalScale);
     rect(x+245*horizontalScale, y+90*verticalScale, 10*horizontalScale, 20*verticalScale);
@@ -13,6 +13,8 @@ class MRRobot {
     line(x+170*horizontalScale, y+100*verticalScale, x+170*horizontalScale, y+50*verticalScale);
     fill(255);
     //arms
+    stroke(0);
+    fill(150);
     rect(x+128*horizontalScale, y+140*verticalScale, 15*horizontalScale, 50*verticalScale);
     rect(x+258*horizontalScale, y+140*verticalScale, 15*horizontalScale, 50*verticalScale);
     //hands
