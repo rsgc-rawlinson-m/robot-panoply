@@ -1,14 +1,18 @@
+// global variables
 int scene = 1;
 
+//the function runs once in your sketch
 void setup () {
 
   size(1000, 700);
 }
-//the function runs once in your sketch
 
+// runs repeatedly
 void draw() {
+
   background(180);
 
+  // draw scene one
   if (scene == 1) {
 
     MRRobot rawliBot = new MRRobot();
@@ -16,8 +20,10 @@ void draw() {
     EPRobot ethanBot = new EPRobot();
     int ethanbotX = 350;
     int ethanbotY = 30;
+    
     //make Andy (my robot)
     rawliBot.drawAt(200, 300, 1.5, 1.5);
+    
     //make the jurers (ben robot)
     benBot.drawAt(-35, 250, 0.4, 0.4);
     benBot.drawAt(-35, 350, 0.4, 0.4);
@@ -31,16 +37,14 @@ void draw() {
     benBot.drawAt(685, 250, 0.4, 0.4);
     benBot.drawAt(785, 250, 0.4, 0.4);
     benBot.drawAt(785, 350, 0.4, 0.4);
+    
     //make the judge (ethan robot) and judge stand
     ethanBot.drawAt(ethanbotX, ethanbotY, 0.5, 0.5);
     fill(100);
     noStroke();
     rect(433, 150, 130, 230);
-
     rect(383, 300, 50, 80);
-
     rect(563, 300, 50, 80);
-
     rect(413, 150, 170, 20);
 
     //make speech bubble
@@ -58,6 +62,7 @@ void draw() {
     textSize(18);
     text("Andy is sentenced to life in prison", 500, 685);
     fill(255);
+    
   } else if (scene == 2) {
 
     background(135, 206, 250);
@@ -68,6 +73,8 @@ void draw() {
     int barbedwireY = 125;
     noFill();
     stroke(0);
+    // From Mr. G – Mike, let's look at how you could use a loop to draw the shapes below
+    // more efficiently – do you see a patter in the x-values for each ellipse?
     ellipse(0, barbedwireY, 50, 50);
     ellipse(20, barbedwireY, 50, 50);
     ellipse(40, barbedwireY, 50, 50);
@@ -120,14 +127,16 @@ void draw() {
     ellipse(980, barbedwireY, 50, 50);
     ellipse(1000, barbedwireY, 50, 50);
     ellipse(1020, barbedwireY, 50, 50);
+    
+    // From Mr. G – what does this code do?
     fill(205, 175, 149);
     rect(0, 500, 1000, 500);
 
-    //draw Red
+    // draw Red
     TMRobots timbot = new TMRobots();
     timbot.drawAt(600, 300, 1, 1);
 
-    //draw andy
+    // draw andy
     MRRobot rawliBot = new MRRobot();
     rawliBot.drawAt(120, 180, 1.6, 1.6);
 
@@ -149,6 +158,7 @@ void draw() {
     ellipse(timbotX + 200, timbotY - 70, 200, 100);
     fill(0);
     text("Wife killing banker", timbotX + 200, timbotY - 70);
+    
   } else if (scene == 3) {
 
     //making background and desk and poster
@@ -173,7 +183,6 @@ void draw() {
     rect(410, 400, 280, 80);
 
     //making characters
-    
     DHRobot danbot = new DHRobot();
     danbot.drawAt(100, 100, 0.7, 0.9);
     int danbotX = 100;
@@ -182,7 +191,6 @@ void draw() {
     timbot.drawAt(690, 200, 1.5, 1.5);
     
     //making danbots text bubble
-    
     fill(255);
     ellipse(danbotX+20, danbotY+20, 200, 100);
     fill(0);
