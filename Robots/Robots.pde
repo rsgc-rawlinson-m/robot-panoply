@@ -8,8 +8,14 @@ void setup () {
 
 void draw() {
   background(180);
-
+  
   if (scene == 1) {
+    textAlign(CENTER);
+    textSize(35);
+    text("THE SHAWSHANK REDEMPTION", 500, 500);
+  }
+
+  else if (scene == 2) {
 
     MRRobot rawliBot = new MRRobot();
     BDRobot benBot = new BDRobot();
@@ -58,7 +64,7 @@ void draw() {
     textSize(18);
     text("Andy is sentenced to life in prison", 500, 685);
     fill(255);
-  } else if (scene == 2) {
+  } else if (scene == 3) {
 
     background(135, 206, 250);
 
@@ -149,12 +155,21 @@ void draw() {
     ellipse(timbotX + 200, timbotY - 70, 200, 100);
     fill(0);
     text("Wife killing banker", timbotX + 200, timbotY - 70);
-  } else if (scene == 3) {
+    
+    //caption and background for caption
+    fill(255);
+    rect(0, 655, 1000, 1000);
+    textAlign(CENTER);
+    fill(0);
+    text("Andy meets Red and the friendship begins", 500, 685);
+    
+  } else if (scene == 4) {
 
     //making background and desk and poster
     fill(100);
     noStroke();
     rect(0, 500, 1000, 1000);
+    stroke(0);
     fill(0, 191, 255);
     rect(20, 20, 200, 200);
     fill(155);
@@ -189,6 +204,16 @@ void draw() {
     textAlign(CENTER);
     text("IT'S A CONSPIRACY", danbotX + 20, danbotY + 20);
     
+    //making title text
+    fill(255);
+    rect(0, 655, 1000, 1000);
+    fill(0);
+    textAlign(CENTER);
+    textSize(18);
+    text("Andy Dufresne escapes prison", 500, 685);
+    
+  } else {
+    background(0);
   }
 }
 
