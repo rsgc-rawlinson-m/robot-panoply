@@ -8,14 +8,12 @@ void setup () {
 
 void draw() {
   background(180);
-  
+
   if (scene == 1) {
     textAlign(CENTER);
     textSize(35);
     text("THE SHAWSHANK REDEMPTION", 500, 500);
-  }
-
-  else if (scene == 2) {
+  } else if (scene == 2) {
 
     MRRobot rawliBot = new MRRobot();
     BDRobot benBot = new BDRobot();
@@ -155,14 +153,13 @@ void draw() {
     ellipse(timbotX + 200, timbotY - 70, 200, 100);
     fill(0);
     text("Wife killing banker", timbotX + 200, timbotY - 70);
-    
+
     //caption and background for caption
     fill(255);
     rect(0, 655, 1000, 1000);
     textAlign(CENTER);
     fill(0);
     text("Andy meets Red and the friendship begins", 500, 685);
-    
   } else if (scene == 4) {
 
     //making background and desk and poster
@@ -188,22 +185,22 @@ void draw() {
     rect(410, 400, 280, 80);
 
     //making characters
-    
+
     DHRobot danbot = new DHRobot();
     danbot.drawAt(100, 100, 0.7, 0.9);
     int danbotX = 100;
     int danbotY = 100;
     TMRobots timbot = new TMRobots();
     timbot.drawAt(690, 200, 1.5, 1.5);
-    
+
     //making danbots text bubble
-    
+
     fill(255);
     ellipse(danbotX+20, danbotY+20, 200, 100);
     fill(0);
     textAlign(CENTER);
     text("IT'S A CONSPIRACY", danbotX + 20, danbotY + 20);
-    
+
     //making title text
     fill(255);
     rect(0, 655, 1000, 1000);
@@ -211,9 +208,16 @@ void draw() {
     textAlign(CENTER);
     textSize(18);
     text("Andy Dufresne escapes prison", 500, 685);
-    
   } else {
     background(0);
+  }
+
+  if (frameCount % 180 == 0) {
+    scene += 1;
+  }
+  saveFrame("Rawli-movie-#####.png");
+  if (scene>4) {
+    exit();
   }
 }
 
