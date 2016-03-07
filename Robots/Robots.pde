@@ -215,8 +215,8 @@ void draw() {
   if (frameCount % 180 == 0) {
     scene += 1;
   }
-  saveFrame("Rawli-movie-#####.png");
-  if (scene>4) {
+  //saveFrame("Rawli-movie-#####.png");
+  if (scene>5) {
     exit();
   }
 }
